@@ -14,7 +14,6 @@ a{
 a:hover{
     text-decoration: underline;
     cursor: pointer;
-    
 }
 header{
     position: fixed;
@@ -123,11 +122,11 @@ header{
 .main_container{
     width: 90%;
     margin: auto;
-    margin-top: 50px;
+    padding-top: 100px;
     
 }
 .line{
-    height: 1px;
+    height: 2px;
     background-color: #e2e2e2;
 }
 .top_container{
@@ -300,10 +299,12 @@ img{
     text-align: center;
 }
 footer{
-    height: 100vh;
-    background-color: #f9f2e8;
+    background-color: black;
     margin-top: 60px;
     padding-top: 10px;
+}
+footer p{
+    padding-bottom: 50px;
 }
 .follow ul{
     list-style: none;
@@ -314,9 +315,16 @@ footer{
     margin-right: 20px;
     margin-top: 5px ;
 }
+.follow ul li a{
+    color:aliceblue
+}
+.follow h1{
+    color: aliceblue;
+}
 .main_container p{
     margin-top: 20px;
     text-align: center;
+    color: aliceblue;
 }
 .main_container .line{
     margin-top: 20px;
@@ -335,7 +343,53 @@ footer{
 }
 .list ul li a{
     font-weight:100;
+    color: aliceblue;
 }
 .center a{
     margin-top: 15px;
+}
+.conatiner{
+    max-width: 60%;
+    margin: 125px auto;
+}
+
+.conatiner img{
+    display: block;
+}
+.image-container p{
+    padding: 5px 0;
+    color: rgb(131, 164, 164);
+}
+.head_line h1{
+    margin: 20px 0;
+}
+.conatiner p{
+    line-height: 24px;
+    margin-bottom: 30px;
+}
+.card-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-container{
+    max-width: 80%;
+    margin: auto;
+}
+.items{
+    display:block;
+    text-align: center;
+}
+.items img{
+    width: 80%;
+}
+.items a{
+    display: block;
+    width: 80%;
+    margin: auto;
+    margin-bottom: 10px;
+    
+}
+.content-page{
+    padding-top: 1px;
 }
