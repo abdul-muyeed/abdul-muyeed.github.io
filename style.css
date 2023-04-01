@@ -12,7 +12,7 @@ ul, ol{
     list-style: none;
 }
 .contain{
-    max-width: 1600px;
+    max-width: 1200px;
     margin: auto;
 }
 .logo-container h1{
