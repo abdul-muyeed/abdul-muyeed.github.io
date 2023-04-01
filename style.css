@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+ul, ol{
+    list-style: none;
+}
+.contain{
+    max-width: 1600px;
+    margin: auto;
+}
+.logo-container h1{
+    color: white;
+}
+.header{
+    background-color: black;
+    height: 80px;
+}
+.header .contain{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   height: 100%;
+}
+.nav-bar{
+    display: flex;
+    gap: 30px;
+}
+.nav-bar li a{
+    font-size: 19px;
+    font-weight: 500;
+    padding: 8px 0;
+    transition: all 0.3s ease;
+}
+.nav-bar li a:hover{
+    color: crimson;
+}
+.hero-section{
+    background-image: url(/images/hero-img.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.sticky-header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    background-color: crimson;
+    height: 65px;
+    transition: all 0.5s ease;
+}
+.sticky-header .nav-bar li a:hover{
+    color: black;
+   
+}
+.nav-bar li:hover{
+    transform: scale(1.02);
+}
+.about-section{
+    height: 100vh;
+}
