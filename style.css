@@ -42,7 +42,7 @@ ul, ol{
     color: crimson;
 }
 .hero-section{
-    background-image: url(/images/hero-img.jpg);
+    background-image: url(images/hero-img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
