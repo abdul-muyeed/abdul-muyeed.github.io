@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,900&display=swap');
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease;
 }
 a{
     text-decoration: none;
@@ -42,7 +44,7 @@ ul, ol{
     color: crimson;
 }
 .hero-section{
-    background-image: url(images/hero-img.jpg);
+    background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.3)), url(images/hero-img.jpg);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -71,4 +73,31 @@ ul, ol{
 }
 .about-section{
     height: 100vh;
+}
+.intro{
+    font-size: 30px;
+}
+.name{
+    font-size: 50px;
+}
+.work{
+    font-size: 35px;
+}
+.intro,.name,.work{
+    font-weight: 600;
+    color: white;
+}
+.red{
+    color: crimson;
+    transition: all 0.3s ease;
+}
+.d-text{
+    border-right: 3px solid white;
+   padding-right: 5px;
+   animation: caret 1s steps(1) infinite;
+}
+@keyframes caret{
+    50%{
+        border-right-color: transparent;
+    }
 }
