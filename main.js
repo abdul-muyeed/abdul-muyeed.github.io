@@ -44,3 +44,16 @@ function opentab(tabname, tabtitle) {
   tabname.classList.add("active");
   tabtitle.classList.add("active");
 }
+const time = document.getElementById("time");
+time.value = new Date();
+
+const url = "https://script.google.com/macros/s/AKfycbxy3NQWWc-tMdUsBgySQl1_3hFi5lyiNgCF9G-7PebuTUqeboe-QTPwrUMWTTpPAF4cWA/exec";
+const form = document.forms["form"];
+form.addEventListener("submit", (e) => {
+  e.preventDefault();
+  fetch(url, { method: "POST", body: new FormData(form) })
+  .then((res) => alert("Thanks for contacting me. I will get back to you soon."))
+  .then(() => {window.location.href = "index.html";})
+  .catch((err) => console.log("Error! " . err))
+
+});

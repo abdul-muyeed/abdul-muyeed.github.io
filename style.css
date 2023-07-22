@@ -221,6 +221,44 @@ ul, ol{
 .card-icon img:hover{
     transform: scale(1.1);
 }
+.contact-section{
+    height: 94vh;
+    background-color: black;
+    color: white;
+}
+.contact-contain{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+.contact-left, .contact-right{
+    width: 50%;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+input, textarea{
+    padding: 7px 12px;
+    border-radius: 10px;
+    outline: none;
+}
+.submit-btn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: none;
+    background-color: crimson;
+    color: white;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.submit-btn:hover{
+    background-color: #ff0000;
+    transform: scale(1.01);
+}
 
 
 
