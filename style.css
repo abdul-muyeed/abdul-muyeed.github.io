@@ -178,6 +178,40 @@ ul, ol{
     font-weight: 600;
     margin-top: 30px;
 }
+.skill-section{
+    height: 91vh;
+    background-color: black;
+    color: white;
+}
+.skill-title{
+    text-align: center;
+    padding: 40px 0;
+}
+.card-contain{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+    grid-gap: 15px 10px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    height: 160px;
+    width: 180px;
+}
+.card-icon img{
+    height: 80px;
+    width: 80px;
+    border-radius: 60px;
+    
+}
+.card-icon img:hover{
+    transform: scale(1.1);
+}
+
 
 
 
