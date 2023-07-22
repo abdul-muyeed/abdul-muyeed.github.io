@@ -15,7 +15,7 @@
       </div>
       <nav>
         <ul class="nav-bar">
-          <li><a href="#">ABOUT</a></li>
+          <li><a href="#about">ABOUT</a></li>
           <li><a href="#">SKILL</a></li>
           <li><a href="#">SERVICE</a></li>
           <li><a href="#">WORK</a></li>
@@ -33,8 +33,34 @@
       </div>
     </div>
   </section>
-  <section class="about-section">
+  <section class="about-section" id="about">
+    <div class="contain">
+      <div class="about-contain">
+        <div class="about-left">
+          <h2>About Me</h2>
+          <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati exercitationem beatae in voluptates magnam itaque distinctio quo mollitia perferendis recusandae, cupiditate, id quidem voluptate ex consequatur! Accusamus maxime consectetur inventore?</p>
+        </div>
+        <div class="about-right">
+          <ul class="about-right-title">
+            <li class="tab-name active" id="1" onclick="opentab('Education','1')">Education</li>
+            <li class="tab-name" id="2" onclick="opentab('Experince','2')">Work Experince</li>
+          </ul>
+          <div class="about-tab">
+            <ul class="tab-contain active" id="Education">
+              <li class="tab-items"><span class="first-item">University of Rajshahi</span><br><span>2021-now</span></li>
+              <li class="tab-items"><span class="first-item">University of Rajshahi</span><br><span>2021-now</span></li>
+              <li class="tab-items"><span class="first-item">University of Rajshahi</span><br><span>2021-now</span></li>
+            </ul>
+            <ul class="tab-contain" id="Experince">
+              <li class="tab-items"><span class="first-item">University of Rajshahi</span><br><span>2021-n</span></li>
+              <li class="tab-items"><span class="first-item">University of Rajshahi</span><br><span>2021-n</span></li>
+              <li class="tab-items"><span class="first-item">University of Rajshahi</span><br><span>2021-n</span></li>
 
+              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
     <script src="main.js"></script>
 </body>

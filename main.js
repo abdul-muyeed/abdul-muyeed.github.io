@@ -31,3 +31,16 @@ document.addEventListener("DOMContentLoaded", function () {
   }
   StartTextAnimation(0);
 });
+
+function opentab(tabname, tabtitle) {
+  tabname = document.getElementById(tabname);
+  tabtitle = document.getElementById(tabtitle);
+  let tabtitles = document.getElementsByClassName("tab-name");
+  let tabnames = document.getElementsByClassName("tab-contain");
+  for (let i = 0; i < tabtitles.length; i++) {
+    tabtitles[i].classList.remove("active");
+    tabnames[i].classList.remove("active");
+  }
+  tabname.classList.add("active");
+  tabtitle.classList.add("active");
+}
