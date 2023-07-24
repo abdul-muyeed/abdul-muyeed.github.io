@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     transition: all 0.2s ease;
-    scroll-padding-top: 65px;
+    scroll-padding-top: 60px;
     
 }
 body{
@@ -77,7 +77,7 @@ ul, ol{
     width: 100%;
     z-index: 999;
     background-color: crimson;
-    
+    height: 60px;
     transition: all 0.5s ease;
 }
 .sticky-header .nav-bar li a:hover{
@@ -216,6 +216,7 @@ ul, ol{
     height: 80px;
     width: 80px;
     border-radius: 60px;
+    background-color: white;
     
 }
 .card-icon img:hover{
@@ -229,7 +230,7 @@ ul, ol{
 .contact-contain{
     display: flex;
     justify-content: center;
-    align-items: center;
+    padding-top: 130px;
    
 }
 .contact-left, .contact-right{
@@ -241,7 +242,7 @@ ul, ol{
     gap: 20px;
 }
 input, textarea{
-    padding: 7px 12px;
+    padding: 10px 12px;
     border-radius: 10px;
     outline: none;
 }
@@ -259,8 +260,37 @@ input, textarea{
     background-color: #ff0000;
     transform: scale(1.01);
 }
-
-
+.contact-right h2{
+    margin-bottom: 30px;
+}
+.card-title h3{
+    font-size: 20px;
+    font-weight: 400;
+    
+}
+.contact-left h2{
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+.contact-left ul li a{
+    display: flex;
+    
+}
+.contact-left ul li a i{
+    font-size: 30px;
+    margin-right: 20px;
+    color: wheat;
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+}
+.contact-left ul li a span{
+    font-size: 22px;
+}
+.contact-left ul li a i:hover{
+    transform: scale(1.1);
+    color: crimson;
+}
 
 
 
