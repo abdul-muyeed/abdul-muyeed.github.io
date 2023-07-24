@@ -73,7 +73,7 @@ window.addEventListener("DOMContentLoaded", async function run(){
   let res = await fetch(end)
   let data = await res.json()
   console.log(data)
-  alert(data)
+  
 
 
 })
