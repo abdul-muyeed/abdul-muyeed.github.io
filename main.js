@@ -66,14 +66,106 @@ form.addEventListener("submit", (e) => {
 });
 
 const url1 = "https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec"; 
-
+const test = document.getElementById("count");
 
 window.addEventListener("DOMContentLoaded", async function run(){
+  
+
+
   let end = new URL('https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec')
   let res = await fetch(end)
   let data = await res.json()
   console.log(data)
+  run1(data)
+})
+function sleep(ms){
+  return new Promise(resolve => setTimeout(resolve,ms))
+}
+async function run1(count){
+  let n= count
+
+for(let i=0;i<=n;i++){
+  // let s = Date.now()
+  await sleep(1000/(n+1-i)) 
+  test.innerHTML = i;
+  // let e = Date.now()
+  // let t = e-s
+  // console.log(t)
   
+}
+}
+console.log(navigator.appCodeName)
+console.log(navigator.userAgentData.mobile)
+console.log(navigator.appName)
+console.log(navigator.appVersion)
+console.log(navigator.connection.effectiveType)
+console.log(navigator.connection.rtt)
+console.log(navigator.connection.downlink)
+console.log(navigator.connection.saveData)
+console.log(navigator.cookieEnabled)
+console.log(navigator.deviceMemory)
+console.log(navigator.platform)
+console.log(navigator.javaEnabled())
+console.log(navigator.hardwareConcurrency)
+console.log(navigator.maxTouchPoints)
+console.log(window.innerHeight)
+console.log(window.innerWidth)
+console.log(screen.height)
+console.log(screen.width)
+console.log(window.devicePixelRatio)
+
+
+console.log(navigator.maxTouchPoints)
+navigator.getBattery()
+.then( e => {
+  console.log(e.charging)
+  console.log(e.level * 100)
+})
+let online = () => {
+  console.log("online")
+}
+let offline = () => {
+  console.log("offline")
+}
+
+
+  window.addEventListener("online", () => {
+    online()
+  })
+  window.addEventListener("offline", () => {
+    offline()
+  })
+
+
+
+
+
+
+
+
+window.addEventListener("DOMContentLoaded", async () => {
+  let end = new URL('https://api.ipify.org')
+  let res = await fetch(end)
+  let data = await res.text()
+  const ip =  data;
+  console.log(ip)
+  let end1 = new URL('https://ipapi.co/'+ip+'/json/')
+  let res1 = await fetch(end1)
+  let data1 = await res1.json()
+  console.log(data1.city)
+  console.log(data1.country)
+  console.log(data1.country_calling_code)
+  console.log(data1.country_capital)
+  console.log(data1.country_code)
+  console.log(data1.country_name)
+  console.log(data1.latitude)
+  console.log(data1.longitude)
+  console.log(data1.org)
+  console.log(data1.postal)
+  console.log(data1.region)
+  console.log(data1.utc_offset)
 
 
 })
+
+

@@ -291,8 +291,33 @@ input, textarea{
     transform: scale(1.1);
     color: crimson;
 }
+.visitor-section{
+    height: 50vh;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 
-
+.visitor-content{
+    height: 200px;
+    width: 300px;
+    background-color: #1e1e1e; 
+    color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+}
+.count{
+    font-size: 50px;
+    font-weight: 400;
+    color: #ff0000;
+}
+.visitor-content h2{
+    font-weight: 400;
+}
 
 
 
