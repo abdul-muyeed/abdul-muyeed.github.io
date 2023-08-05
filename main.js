@@ -116,25 +116,7 @@ console.log(window.devicePixelRatio)
 
 
 console.log(navigator.maxTouchPoints)
-navigator.getBattery()
-.then( e => {
-  console.log(e.charging)
-  console.log(e.level * 100)
-})
-let online = () => {
-  console.log("online")
-}
-let offline = () => {
-  console.log("offline")
-}
 
-
-  window.addEventListener("online", () => {
-    online()
-  })
-  window.addEventListener("offline", () => {
-    offline()
-  })
 
 
 
