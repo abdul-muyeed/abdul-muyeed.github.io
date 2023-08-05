@@ -118,36 +118,3 @@ console.log(window.devicePixelRatio)
 console.log(navigator.maxTouchPoints)
 
 
-
-
-
-
-
-
-
-window.addEventListener("DOMContentLoaded", async () => {
-  let end = new URL('https://api.ipify.org')
-  let res = await fetch(end)
-  let data = await res.text()
-  const ip =  data;
-  console.log(ip)
-  let end1 = new URL('https://ipapi.co/'+ip+'/json/')
-  let res1 = await fetch(end1)
-  let data1 = await res1.json()
-  console.log(data1.city)
-  console.log(data1.country)
-  console.log(data1.country_calling_code)
-  console.log(data1.country_capital)
-  console.log(data1.country_code)
-  console.log(data1.country_name)
-  console.log(data1.latitude)
-  console.log(data1.longitude)
-  console.log(data1.org)
-  console.log(data1.postal)
-  console.log(data1.region)
-  console.log(data1.utc_offset)
-
-
-})
-
-
