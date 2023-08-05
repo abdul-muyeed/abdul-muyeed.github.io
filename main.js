@@ -75,7 +75,6 @@ window.addEventListener("DOMContentLoaded", async function run(){
   let end = new URL('https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec')
   let res = await fetch(end)
   let data = await res.json()
-  console.log(data)
   run1(data)
 })
 function sleep(ms){
@@ -94,27 +93,14 @@ for(let i=0;i<=n;i++){
   
 }
 }
-console.log(navigator.appCodeName)
-console.log(navigator.userAgentData.mobile)
-console.log(navigator.appName)
-console.log(navigator.appVersion)
-console.log(navigator.connection.effectiveType)
-console.log(navigator.connection.rtt)
-console.log(navigator.connection.downlink)
-console.log(navigator.connection.saveData)
-console.log(navigator.cookieEnabled)
-console.log(navigator.deviceMemory)
-console.log(navigator.platform)
-console.log(navigator.javaEnabled())
-console.log(navigator.hardwareConcurrency)
-console.log(navigator.maxTouchPoints)
-console.log(window.innerHeight)
-console.log(window.innerWidth)
-console.log(screen.height)
-console.log(screen.width)
-console.log(window.devicePixelRatio)
+console.log("mobile:",navigator.userAgentData.mobile)
+console.log(navigator.platform+',',navigator.appName+',',navigator.appCodeName+',',navigator.appVersion)
+console.log("Network Type:",navigator.connection.effectiveType)
+console.log("RAM:",navigator.deviceMemory)
+console.log("Touch:",navigator.maxTouchPoints)
+console.log(window.innerHeight+'/'+screen.height)
+console.log(window.innerWidth+'/'+screen.width)
+console.log(window.screen.orientation.type)
 
-
-console.log(navigator.maxTouchPoints)
 
 
