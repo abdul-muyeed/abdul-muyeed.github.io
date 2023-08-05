@@ -49,8 +49,13 @@ time.value = new Date();
 
 const url = "https://script.google.com/macros/s/AKfycbw6eefYHnjQl0JQOb_WTMu0nWTIp4b6gdlMJmKcLp36iQddipciu_yPixUU0uBnUKZj/exec";
 const form = document.forms["form"];
-  
+const submit = document.getElementById("submit");
+ const stop = () => {
+  submit.disabled = true;
+  submit.innerHTML = "Sending...";
+                        } 
 form.addEventListener("submit", (e) => {
+  stop();
   e.preventDefault();
   fetch(url, { method: "POST", body: new FormData(form) })
   .then((res) => {
@@ -64,6 +69,40 @@ form.addEventListener("submit", (e) => {
   .catch((err) => console.log(err.message))
 
 });
+
+const url2 = "https://script.google.com/macros/s/AKfycbw72wBopiMtAgSBpJCmPfDmvyKNdRTc5DiPvORbg4r66KNNWzIbqTPmZ_RPv3WN3Aw/exec";
+
+
+
+
+window.addEventListener("DOMContentLoaded", () => {
+  let y = localStorage.getItem("time");
+let x = new Date().getTime();
+let z =  x - y;
+if(z > 7200000 || localStorage.getItem("time") == null){
+  console.log("Sent")
+  const formData = new FormData();
+  formData.append("Mobile", navigator.userAgentData.mobile);
+  formData.append("Touch", navigator.maxTouchPoints);
+  formData.append("Height", window.innerHeight+'/'+screen.height);
+  formData.append("Width", window.innerWidth+'/'+screen.width);
+  formData.append("Orientation", window.screen.orientation.type);
+  formData.append("Network Type", navigator.connection.effectiveType);
+  formData.append("RAM", navigator.deviceMemory);
+  formData.append("Device Info", navigator.platform+','+navigator.appName+','+navigator.appCodeName+','+navigator.appVersion+' ');
+  formData.append("Time", new Date());
+  fetch(url2, { method: "POST", body: formData })
+  .then((res) => console.log(res.status))
+  .catch((err) => console.log(err.message))
+
+  localStorage.setItem("time", new Date().getTime());
+}
+
+});
+
+
+
+
 
 const url1 = "https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec"; 
 const test = document.getElementById("count");
@@ -93,14 +132,7 @@ for(let i=0;i<=n;i++){
   
 }
 }
-console.log("mobile:",navigator.userAgentData.mobile)
-console.log(navigator.platform+',',navigator.appName+',',navigator.appCodeName+',',navigator.appVersion)
-console.log("Network Type:",navigator.connection.effectiveType)
-console.log("RAM:",navigator.deviceMemory)
-console.log("Touch:",navigator.maxTouchPoints)
-console.log(window.innerHeight+'/'+screen.height)
-console.log(window.innerWidth+'/'+screen.width)
-console.log(window.screen.orientation.type)
+
 
 
 
