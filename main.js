@@ -47,24 +47,6 @@ function opentab(tabname, tabtitle) {
 const time = document.getElementById("time");
 time.value = new Date();
 
-const url = "https://script.google.com/macros/s/AKfycbxy3NQWWc-tMdUsBgySQl1_3hFi5lyiNgCF9G-7PebuTUqeboe-QTPwrUMWTTpPAF4cWA/exec";
-const form = document.forms["form"];
-  
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
-  fetch(url, { method: "POST", body: new FormData(form) })
-  .then((res) => {
-    if(res.ok){
-      alert("Thank You for contacting me.")
-    }else{
-      console.log("Not Successful")
-    }
-  })
-  .then(() => window.location='index.html' )
-  .catch((err) => console.log(err.message))
-
-});
-
 const url1 = "https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec"; 
 const test = document.getElementById("count");
 
