@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
-    <link rel="stylesheet" href="https://s.pageclip.co/v1/pageclip.css" media="screen">
     <title>Abdul Muyeed - Portfolio</title>
   </head>
   <body>
@@ -187,12 +186,12 @@
 
           <div class="contact-right">
             <h2>Send a Message</h2>
-            <form class="form pageclip-form" method="post" action="https://send.pageclip.co/z0YF5DeAkbMp4sFG7Q8cYMehj4COy3Dt/contact-us">
+            <form class="form" method="post" action="" name="form">
               <input type="text" name="Name" placeholder="Name" />
               <input type="email" name="Email" placeholder="Email" />
-              <!-- <input type="hidden" id="time" name="Time"/> -->
+              <input type="hidden" id="time" name="Time"/>
               <textarea name="Message" cols="30" rows="10" placeholder="Message"></textarea>
-              <button class="submit-btn button pageclip-form__submit" type="submit">Send</button>
+              <button class="submit-btn" type="submit" name="submit">Send</button>
             </form>
           </div>
         </div>
@@ -208,6 +207,5 @@
     </div>
 
     <script src="main.js"></script>
-    <script src="https://s.pageclip.co/v1/pageclip.js" charset="utf-8"></script>
   </body>
 </html>
