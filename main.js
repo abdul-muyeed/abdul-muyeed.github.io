@@ -44,8 +44,8 @@ function opentab(tabname, tabtitle) {
   tabname.classList.add("active");
   tabtitle.classList.add("active");
 }
-const time = document.getElementById("time");
-time.value = new Date();
+// const time = document.getElementById("time");
+// time.value = new Date();
 
 const url1 = "https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec"; 
 const test = document.getElementById("count");
