@@ -146,5 +146,9 @@ window.addEventListener("scroll", () => {
   gotoup.classList.toggle("display", window.scrollY > 300);
 });
 
+let moveTo = (p) => {
+  window.scrollTo(0, p);
+}
+
 
 

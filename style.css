@@ -5,7 +5,7 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
     transition: all 0.2s ease;
-    scroll-padding-top: 60px;
+    
     
 }
 body{
@@ -48,15 +48,16 @@ ul, ol{
     display: flex;
     gap: 30px;
 }
-.nav-bar li a{
+.nav-bar li{
     font-size: 19px;
     font-weight: 500;
     padding: 8px 0;
     transition: all 0.3s ease;
+    color: white;
 }
-.nav-bar li a:hover{
+.nav-bar li:hover{
     color: crimson;
-    height: 65px;
+    
 }
 .hero-section{
     background: linear-gradient(rgb(0,0,0,0.6),rgb(0,0,0,0.3)), url(images/hero-img.jpg);
@@ -80,7 +81,7 @@ ul, ol{
     height: 60px;
     transition: all 0.5s ease;
 }
-.sticky-header .nav-bar li a:hover{
+.sticky-header .nav-bar li:hover{
     color: black;
    
 }
@@ -88,7 +89,7 @@ ul, ol{
     transform: scale(1.02);
 }
 .about-section{
-    height: 94vh;
+    height: 100vh;
 }
 .intro{
     font-size: 30px;
@@ -121,7 +122,7 @@ ul, ol{
     gap: 150px;
     justify-content: center;
     align-items: center;
-    height: 91vh;
+    height: 100vh;
 }
 .about-right, .about-left{
     width: 35%;
@@ -189,13 +190,13 @@ ul, ol{
     margin-top: 30px;
 }
 .skill-section{
-    height: 94vh;
+    height: 100vh;
     background-color: black;
     color: white;
 }
 .skill-title{
     text-align: center;
-    padding: 55px 0 40px 0;
+    padding-bottom: 50px;
 }
 .card-contain{
     display: grid;
@@ -211,6 +212,7 @@ ul, ol{
     border-radius: 10px;
     height: 160px;
     width: 180px;
+    gap: 5px;
 }
 .card-icon img{
     height: 80px;
@@ -223,14 +225,13 @@ ul, ol{
     transform: scale(1.1);
 }
 .contact-section{
-    height: 94vh;
+    height: 100vh;
     background-color: black;
     color: white;
 }
 .contact-contain{
     display: flex;
     justify-content: center;
-    padding-top: 130px;
    
 }
 .contact-left, .contact-right{
@@ -319,7 +320,7 @@ input, textarea{
     font-weight: 400;
 }
 .service-section{
-    height: 94vh;
+    height: 100vh;
     background-color: black;
     color: white;
    
@@ -330,8 +331,8 @@ input, textarea{
 .service-items{
     display: grid;
     grid-template-columns: repeat(2,1fr);
-    grid-gap: 0px 20px;
-    margin-top: 30px;
+    grid-gap: 0px 50px;
+    margin-top: 65px;
 }
 .service-item{
     display: flex;
@@ -347,9 +348,10 @@ input, textarea{
     font-size: 25px;
     font-weight: 500;
     margin-bottom: 20px;
+    text-align: center;
 }
 .service-item p{
-    text-align: center;
+    text-align: justify;
 }
 .service-icon i{
     font-size: 90px;
@@ -360,7 +362,7 @@ input, textarea{
     transform: scale(1.1);
 }
 .service-contain{
-    padding-top: 40px;
+    padding-top: 75px;
 }
 .bxs-up-arrow-circle{
     position: fixed;
@@ -386,4 +388,7 @@ input, textarea{
     50%{
         border-right-color: transparent;
     }
+}
+section{
+    height: 100vh;
 }
