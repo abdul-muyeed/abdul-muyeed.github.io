@@ -77,26 +77,31 @@ const url2 = "https://script.google.com/macros/s/AKfycbw72wBopiMtAgSBpJCmPfDmvyK
 
 window.addEventListener("DOMContentLoaded", () => {
   let y = localStorage.getItem("time");
-let x = new Date().getTime();
-let z =  x - y;
-if(z > 7200000 || localStorage.getItem("time") == null){
-  console.log("Sent")
-  const formData = new FormData();
-  formData.append("Mobile", navigator.userAgentData.mobile);
-  formData.append("Touch", navigator.maxTouchPoints);
-  formData.append("Height", window.innerHeight+'/'+screen.height);
-  formData.append("Width", window.innerWidth+'/'+screen.width);
-  formData.append("Orientation", window.screen.orientation.type);
-  formData.append("Network Type", navigator.connection.effectiveType);
-  formData.append("RAM", navigator.deviceMemory);
-  formData.append("Device Info", navigator.platform+','+navigator.appName+','+navigator.appCodeName+','+navigator.appVersion+' ');
-  formData.append("Time", new Date());
-  fetch(url2, { method: "POST", body: formData })
-  .then((res) => console.log(res.status))
-  .catch((err) => console.log(err.message))
-
-  localStorage.setItem("time", new Date().getTime());
-}
+  let x = new Date().getTime();
+  let z =  x - y;
+  if(window.location.href == 'http://127.0.0.1:5500/index.html'){
+    console.log("admin running")
+  }else{
+    if(z > 7200000 || localStorage.getItem("time") == null){
+      console.log("Sent")
+      const formData = new FormData();
+      formData.append("Mobile", navigator.userAgentData.mobile);
+      formData.append("Touch", navigator.maxTouchPoints);
+      formData.append("Height", window.innerHeight+'/'+screen.height);
+      formData.append("Width", window.innerWidth+'/'+screen.width);
+      formData.append("Orientation", window.screen.orientation.type);
+      formData.append("Network Type", navigator.connection.effectiveType);
+      formData.append("RAM", navigator.deviceMemory);
+      formData.append("Device Info", navigator.platform+','+navigator.appName+','+navigator.appCodeName+','+navigator.appVersion+' ');
+      formData.append("Time", new Date());
+      fetch(url2, { method: "POST", body: formData })
+      .then((res) => console.log(res.status))
+      .catch((err) => console.log(err.message))
+  
+      localStorage.setItem("time", new Date().getTime());
+    }
+  }
+  
 
 });
 
@@ -107,20 +112,20 @@ if(z > 7200000 || localStorage.getItem("time") == null){
 const url1 = "https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec"; 
 const test = document.getElementById("count");
 
-window.addEventListener("DOMContentLoaded", async function run(){
+window.addEventListener("DOMContentLoaded", async () => {
   
 
 
   let end = new URL('https://script.google.com/macros/s/AKfycbzx-e_izwPXFxA0TL4tkts-GslakvXF-n2ZwY_Cd3OfTiwtEmlbnsd6LWLx7hRQBuZiLQ/exec')
   let res = await fetch(end)
   let data = await res.json()
-  run1(data)
+  run(data)
 })
 function sleep(ms){
   return new Promise(resolve => setTimeout(resolve,ms))
 }
-async function run1(count){
-  let n= count
+async function run(count){
+  let n = count
 
 for(let i=0;i<=n;i++){
   // let s = Date.now()

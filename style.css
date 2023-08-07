@@ -318,7 +318,50 @@ input, textarea{
 .visitor-content h2{
     font-weight: 400;
 }
-
+.service-section{
+    height: 94vh;
+    background-color: black;
+    color: white;
+   
+}
+.service-section h2{
+    text-align: center;
+}
+.service-items{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 0px 20px;
+    margin-top: 30px;
+}
+.service-item{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: #1e1e1e;
+    border-radius: 10px;
+    padding: 30px 50px 45px;
+    
+}
+.service-item h3{
+    font-size: 25px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+.service-item p{
+    text-align: center;
+}
+.service-icon i{
+    font-size: 90px;
+    color: crimson;
+    margin-bottom: 20px;
+}
+.service-icon i:hover{
+    transform: scale(1.1);
+}
+.service-contain{
+    padding-top: 40px;
+}
 
 
 
