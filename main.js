@@ -138,6 +138,13 @@ for(let i=0;i<=n;i++){
 }
 }
 
+let gotoup = document.getElementById("gotoup");
+gotoup.addEventListener("click", () => {
+  window.scrollTo(0, 0);
+})
+window.addEventListener("scroll", () => {
+  gotoup.classList.toggle("display", window.scrollY > 300);
+});
 
 
 

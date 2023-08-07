@@ -362,6 +362,18 @@ input, textarea{
 .service-contain{
     padding-top: 40px;
 }
+.bxs-up-arrow-circle{
+    position: fixed;
+    color: crimson;
+    font-size: 60px;
+    bottom: 20px;
+    right: 20px;
+    cursor: pointer;
+    opacity: 0;
+}
+.display{
+    opacity: 1;
+}
 
 
 
