@@ -397,7 +397,6 @@ textarea {
 @keyframes caret {
   50% {
     border-right-color: transparent;
-    color: ;
   }
 }
 @keyframes color {
