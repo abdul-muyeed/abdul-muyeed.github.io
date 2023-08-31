@@ -374,6 +374,10 @@ input, textarea{
     cursor: pointer;
     opacity: 0;
     z-index: 999;
+    background-image: radial-gradient(ivory 50%, crimson 50%);
+    border-radius: 1000px;
+    animation: color 7.5s infinite;
+    transition: all 0.3s ease;
 }
 .display{
     opacity: 1;
@@ -408,5 +412,20 @@ input, textarea{
 @keyframes caret{
     50%{
         border-right-color: transparent;
+        color: 
+    }
+}
+@keyframes color{
+    20%{
+        background-image: radial-gradient( turquoise  50%, crimson 50%);
+    }
+    40%{
+        background-image: radial-gradient(gold 50%, crimson 50%);
+    }
+    60%{
+        background-image: radial-gradient(forestgreen 50%, crimson 50%);
+    }
+    80%{
+        background-image: radial-gradient(gray 50%, crimson 50%);
     }
 }
