@@ -30,7 +30,13 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
   StartTextAnimation(0);
-});
+})
+
+document.addEventListener("DOMContentLoaded", function () {
+  window.scrollTo(0, 0);
+  const text = document.getElementsByClassName("hero-text")
+  text[0].classList.add("add");
+})
 
 function opentab(tabname, tabtitle) {
   tabname = document.getElementById(tabname);
@@ -150,5 +156,16 @@ let moveTo = (p) => {
   window.scrollTo(0, p);
 }
 
+const  reveal = document.querySelectorAll(".reveal")
+
+window.addEventListener("scroll", () => {
+  for(let i = 0; i < 5; i++){
+    let contentPosition = reveal[i].getBoundingClientRect().bottom;
+    if (contentPosition < 1000) {
+      reveal[i].classList.add("add");
+    }
+  }
+  
+})
 
 
