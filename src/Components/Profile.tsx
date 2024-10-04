@@ -13,7 +13,7 @@ export default function Profile() {
             width={80}
           />
         </figure>
-        <div className="info-container">
+        <div className="name-container">
           <h1 className="name" title="Abdul Muyeed">
             Abdul Muyeed
           </h1>
