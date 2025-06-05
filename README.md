@@ -1,50 +1,66 @@
-# React + TypeScript + Vite
+# Abdul Muyeed - Personal Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the personal portfolio website of Abdul Muyeed, showcasing skills, projects, educational background, and professional experience.
 
-Currently, two official plugins are available:
+**Live Demo:** [https://abdul-muyeed.github.io](https://abdul-muyeed.github.io)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## Expanding the ESLint configuration
+*   **Frontend:** React, Vite, TypeScript
+*   **Styling:** CSS (details in `src/App.css`)
+*   **Icons:** React Icons
+*   **Deployment:** GitHub Pages
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Features
 
-- Configure the top-level `parserOptions` property like this:
+*   **About Me:** A brief introduction and personal interests.
+*   **Skills:** A categorized list of technical skills and technologies.
+*   **Education:** Details about academic qualifications.
+*   (Potential future sections: Projects, Achievements, Contact)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Setup and Installation
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+To run this project locally, follow these steps:
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/abdul-muyeed/abdul-muyeed.github.io.git
+    cd abdul-muyeed.github.io
+    ```
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+2.  **Install dependencies:**
+    Using yarn (as per `yarn.lock`):
+    ```bash
+    yarn install
+    ```
+    Or using npm:
+    ```bash
+    npm install
+    ```
+
+3.  **Run the development server:**
+    ```bash
+    yarn dev
+    ```
+    Or using npm:
+    ```bash
+    npm run dev
+    ```
+    This will start the Vite development server, typically at `http://localhost:5173`.
+
+## Available Scripts
+
+*   `yarn dev`: Starts the development server.
+*   `yarn build`: Builds the application for production (outputs to `dist/` directory).
+*   `yarn lint`: Lints the codebase using ESLint.
+*   `yarn predeploy`: Script that runs before deployment (currently runs `yarn build`).
+*   `yarn deploy`: Deploys the built application to GitHub Pages using the `gh-pages` package.
+*   `yarn preview`: Serves the production build locally for preview.
+
+## Deployment
+
+This project is deployed using GitHub Pages. The `yarn deploy` script handles the build process and pushes the contents of the `dist` folder to the `gh-pages` branch on GitHub.
+
+## License
+
+This project is open source. Feel free to use it as a template or inspiration. (Consider adding a specific license like MIT if desired).
